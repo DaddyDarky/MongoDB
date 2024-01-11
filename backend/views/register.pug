@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        h1 Registrar Usuario 
+        form(action="/auth/register",method="post")
+        label(for="username") Nombre de Usuario 
+        input(type="text",name=username,id=username)  
+        br
+        label(for="password") Contraseña 
+        input(type="text",name=password,id=password)  
+        br
+        label(for="email") Email 
+        input(type="text",name=email,id=email)  
+        br
+        br
+        button(type="submit") Registrar

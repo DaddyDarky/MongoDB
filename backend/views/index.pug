@@ -1,0 +1,12 @@
+html    
+    head
+        title Bienvenido 
+    body
+        h1 Bienvenido, #{currentUser ? currentUser.username : 'Invitado'}
+
+        if !currentUser
+            ul 
+                li 
+                    a(href="/auth/login") Logeo del usuario
+                li 
+                    a(href="/auth/register") Registrar usuario
