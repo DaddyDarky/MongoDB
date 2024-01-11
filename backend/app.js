@@ -18,6 +18,17 @@ app.use(express.static('public'));
 
 dotenv.config();
 
+app.use(session({
+    secret: '',
+    resave: true,
+    saveUninitialized: false
+}));
+app.use((req,res,next)=>{
+    res.locals.currentUrser = req.session.user;
+})
+
+
+
 mongoose.connect(process.env.MONGO_URL)
 
 const authRoutes= require('./routes/auth')
